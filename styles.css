@@ -1,9 +1,9 @@
 .accordion-div{
-    height: 300px;
+    height: auto;
     width: 50%;
-    border: solid skyblue  10px;
-    margin: 3px;
-    padding: 3px;
+    border: solid #aaa  3px;
+    border-radius: 8px;
+    margin: 30px;
 }
 
 
@@ -12,13 +12,85 @@
     width: 100%;
     height: 33%;
     cursor: pointer;
-    transition: all ease 0.5s;
+    transition: all 0.5s;
+    border: none !important;
+    outline: none !important;
+    padding: 18px;
+    text-align: left;
+    overflow: hidden;
+    position: relative;
 }
 
-.active, .accordion:hover{
-    background-color: #bbb;
+
+.accordion.active, .accordion:hover{
+    background-color: #aaa;
+    transition: all 0.3s ease-out;;
+}
+
+.accordion p{
+    transition: all 0.5s;
+    width: inherit;
+}
+
+.accordion:hover p{
+    transform: translateX(80%);
+    transition: all 0.5s;
+}
+
+.accordion.active p{
+    transform: translateX(80%);
+    transition: all 0.5s;
 }
 
 .panel{
-    display: none;
+    overflow: hidden;
+    padding:0 18px;
+    max-height: 0px;
+} 
+
+.panel.active{
+    max-height: 10em;
+    transition: all 0.2s ease-out;
+}
+
+
+.accordionT-enter-active,
+.accordionT-leave-active {
+  transition: all 0.2s;
+  max-height: 230px;
+  overflow: hidden;
+}
+
+
+.accordionT-enter,
+.accordionT-leave-to
+{
+  opacity: 0;
+  max-height: 0px;
+}
+
+
+.tab-div{
+    margin: 10px;
+    border: solid #ddd 1px;
+    border-radius: 5px;
+    box-shadow: #aaa 5px 2px;
+}
+
+
+.tab-content{
+    margin: 6px;
+}
+
+.tab-pane hr{
+    width: 60%;
+    margin: 0px;
+}
+
+
+.nav-item:hover{
+    margin-top: -2px;
+    padding-top: -2px;
+    border-top: solid cornflowerblue 2px;
+    border-radius: 5px;
 }
